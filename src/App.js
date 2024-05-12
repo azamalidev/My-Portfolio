@@ -5,6 +5,7 @@ import Skills from "./component/skills";
 import { Progress, Modal, notification } from "antd";
 import PhotoAlbum from "react-photo-album";
 import emailjs from "@emailjs/browser";
+
 import ScrollAnimation from "react-animate-on-scroll";
 import ProgressBar from "react-scroll-progress-bar";
 import img1 from "./assets/images/Almuhasba 1.png";
