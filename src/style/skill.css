@@ -1,0 +1,125 @@
+.skills-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-card {
+    height: 100px;
+    /* width: 140px; */
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+#skills {
+    display: flex !important;
+    background-color: transparent;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+
+@media (max-width: 768px) {
+    #skills {
+        display: flex !important;
+    flex-direction: column; /* Display skills vertically */
+    align-items: center;
+    margin-bottom: 211%;
+    margin-top: 520px;
+    }
+}
+ /* For Card 2 */
+
+
+
+.skills-row2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-card2 {
+    height: 100px;
+    /* width: 140px; */
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+#skills2 {
+    display: flex !important;
+    background-color: transparent;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    #skills2 {
+    display: flex !important;
+    flex-direction: column; /* Display skills vertically */
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 200px;
+  
+    }
+    .skill-card2 {
+        height: 100px;
+        width: 140px;
+        margin-right: 10px;
+        background-color: transparent;
+        position: relative !important;
+        left:-70%!important;
+    top: -856%;
+       
+    }
+}
+
+
+
+/* For Card 3 */
+
+.skills-row3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.skill-card3 {
+    height: 100px;
+    /* width: 140px; */
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+#skills3 {
+    display: flex !important;
+    background-color: transparent;
+    justify-content: center;
+    margin-bottom: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    #skills3 {
+    display: flex !important;
+    flex-direction: column; /* Display skills vertically */
+    align-items: center;
+    margin-bottom: 106%;
+    margin-top: -320%;
+
+  
+    }
+    .skill-card3 {
+        height: 100px;
+        width: 140px;
+        margin-right: 10px;
+        background-color: transparent;
+        position: relative !important;
+        left:70%!important;
+       
+    }
+}
+
+
