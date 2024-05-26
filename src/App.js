@@ -2,29 +2,27 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./style/mystyle.module.css";
 import Aboutme from "./aboutme";
 import Skills from "./component/skills";
-import { Progress, Modal, notification } from "antd";
+import {  notification } from "antd";
 import PhotoAlbum from "react-photo-album";
 import emailjs from "@emailjs/browser";
-
+import Services from './component/services'
 import ScrollAnimation from "react-animate-on-scroll";
 import ProgressBar from "react-scroll-progress-bar";
 import img1 from "./assets/images/Almuhasba 1.png";
-import img2 from "./assets/images/Almuhasba 2.png";
+import img2 from "./assets/images/placementServices.png";
 import img3 from "./assets/images/FYP.png";
 import img4 from "./assets/images/Saudibank limited.png";
 import img5 from "./assets/images/fuelmedia 2.png";
-import img6 from "./assets/images/fuelmedia 3.png";
+import img6 from "./assets/images/bookluxurylogin.png";
 import img7 from "./assets/images/fuelmedia 3.png";
 import contact from './assets/images/contact.png'
 import ItsMe from './assets/icons/itsme'
+import psusa from './assets/images/psusa.png'
+import bookluxury from './assets/images/bookluxury.png'
 function App() {
-  const geoUrl =
-    "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
   const form = useRef();
   const [api, contextHolder] = notification.useNotification();
   const [darkMode, setDarkMode] = useState(true);
-  const [modelData, setmodelData] = useState({});
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -77,97 +75,20 @@ function App() {
       height: 600,
     },
   ];
-  const showModal = (item) => {
-    setIsModalOpen(true);
-    setmodelData(item);
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-  const [services, setServices] = useState([
-    {
-      id: 1,
-      title: "Web Appication",
-      detail:
-        "I can developed different types of websites like Portfolio , E-commerence , Banking , Management systems and introductory website. ",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-code-slash"
-          viewBox="0 0 16 16"
-        >
-          <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-        </svg>
-      ),
-      image:
-        "https://www.creative-tim.com/blog/content/images/2022/01/which-development-job-is-right-for-you.jpg",
-      detailMore:
-        "Different type of management system which i can build such as (Shop, hospital, school and collage etc) I can developed both frontend and backend in Next.js/React and express.js/Nest.js ",
-      rank: { "React.js": 91, "Next.js": 87, "Express/Nest.js": 80 },
-    },
-    {
-      id: 2,
-      title: "Mobile Application",
-      detail:
-        "I can developed different types of Mobile Application in react Native. I can developed restorent , banking and hotel apps. ",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="50"
-          fill="currentColor"
-          class="bi bi-phone-flip"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M11 1H5a1 1 0 0 0-1 1v6a.5.5 0 0 1-1 0V2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v6a.5.5 0 0 1-1 0V2a1 1 0 0 0-1-1Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a.5.5 0 0 0-1 0v2a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-2a.5.5 0 0 0-1 0v2ZM1.713 7.954a.5.5 0 1 0-.419-.908c-.347.16-.654.348-.882.57C.184 7.842 0 8.139 0 8.5c0 .546.408.94.823 1.201.44.278 1.043.51 1.745.696C3.978 10.773 5.898 11 8 11c.099 0 .197 0 .294-.002l-1.148 1.148a.5.5 0 0 0 .708.708l2-2a.5.5 0 0 0 0-.708l-2-2a.5.5 0 1 0-.708.708l1.145 1.144L8 10c-2.04 0-3.87-.221-5.174-.569-.656-.175-1.151-.374-1.47-.575C1.012 8.639 1 8.506 1 8.5c0-.003 0-.059.112-.17.115-.112.31-.242.6-.376Zm12.993-.908a.5.5 0 0 0-.419.908c.292.134.486.264.6.377.113.11.113.166.113.169 0 .003 0 .065-.13.187-.132.122-.352.26-.677.4-.645.28-1.596.523-2.763.687a.5.5 0 0 0 .14.99c1.212-.17 2.26-.43 3.02-.758.38-.164.713-.357.96-.587.246-.229.45-.537.45-.919 0-.362-.184-.66-.412-.883-.228-.223-.535-.411-.882-.571ZM7.5 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1Z"
-          />
-        </svg>
-      ),
-      image:
-        "https://assets-global.website-files.com/6410ebf8e483b5bb2c86eb27/6410ebf8e483b5758186fbd8_ABM%20college%20mobile%20app%20dev%20main.jpg",
-      detailMore:
-        "Different type of mobile apps which i can build such as (Attendance system, music or movie apps  etc) I can developed both frontend and backend in React native and Express.js ",
-      rank: { "React.Native": 80, "Express/Nest.js": 80 },
-    },
-    {
-      id: 3,
-      title: "Cross Platform Application",
-      detail:
-        "I can developed different types of Hybird and Cross Platform Appications for both mobile and web. ",
-      icon: (
-        <>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="35"
-            fill="currentColor"
-            class="bi bi-laptop"
-            viewBox="0 0 16 16"
-          >
-            <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="35"
-            fill="currentColor"
-            class="bi bi-phone"
-            viewBox="0 0 16 16"
-          >
-            <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
-            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-          </svg>
-        </>
-      ),
-      image:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD02kGxKsQu32jvATGml2ZBO6MZk0JPq_N3mvNIGctkiE4qBitSGp9r0vwXfR8NYiphQg&usqp=CAU",
-    },
-  ]);
+  // const showModal = (item) => {
+  //   setIsModalOpen(true);
+  //   setmodelData(item);
+  // };
+  // const handleCancel = () => {
+  //   setIsModalOpen(false);
+  // };
+
   const [showTopBtn, setShowTopBtn] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -178,48 +99,10 @@ function App() {
       }
     });
   }, []);
-  const goToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
   const openNotification = async (topVal) => {
-    await fetch("./Azam-Ali.pdf")
-      .then(response => response.blob())
-      .then(blob => {
-        // Create a Blob and set up the download link
-        var element = document.createElement("a");
-        element.href = URL.createObjectURL(blob);
-        element.download = "Azam-Ali.pdf";
-        console.log(element.download, element.href)
-        document.body.appendChild(element); // Append the link to the DOM
-        element.click();
-        document.body.removeChild(element); // Remove the link from the DOM after clicking
-      })
-      .catch(error => {
-        console.error("Error fetching the PDF:", error);
-      });
-    api.open({
-      message: "Resume has been download!",
-      style: {
-        width: 300,
-      },
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-download"
-          viewBox="0 0 16 16"
-        >
-          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-        </svg>
-      ),
-      topVal,
-    });
+
+    window.open('https://drive.google.com/drive/folders/1YZvqG7g2PUk8va_BUGfben1k8J3v1vGV', '_blank');
   };
   const sendEmail = (e) => {
     e.preventDefault();
@@ -303,74 +186,7 @@ function App() {
           darkMode ? `container-fluid bg-dark ` : `container-fluid bg-white `
         }
       >
-        <Modal
-          title="Basic Modal"
-          okButtonProps={{ style: { display: "none" } }}
-          cancelButtonProps={{ style: { display: "none" } }}
-          open={isModalOpen}
-          width={700}
-          onCancel={handleCancel}
-        >
-          <div className="row" id="top">
-            <div className="col-sm-4">
-              <img
-                width={200}
-                height={200}
-                src={modelData.image}
-                alt="Image is not loaded"
-              />
-            </div>
-            <div className="col-sm-8 row text-center">
-              <h4 className="mt-1">{modelData.title}</h4>
-              <h6>
-                {modelData.detail}
-                {modelData.detailMore}
-              </h6>
-              {modelData?.rank ? (
-                <div className="row mt-2 mb-2">
-                  <h4
-                    className="bg-success text-light  rounded p-1 "
-                    style={{ marginLeft: "12px" }}
-                  >
-                    Performance States
-                  </h4>
-                  <div className="col-sm-4  mt-1">
-                    <span className="m-2 ">
-                      {Object.keys(modelData?.rank)[0]}
-                    </span>
-                    <Progress
-                      type="circle"
-                      percent={Object.values(modelData?.rank)[0]}
-                      size={70}
-                    />
-                  </div>
-                  <div className="col-sm-4  mt-1">
-                    <span className="m-2">
-                      {Object.keys(modelData?.rank)[1]}
-                    </span>
-                    <Progress
-                      type="circle"
-                      percent={Object.values(modelData?.rank)[1]}
-                      size={70}
-                    />
-                  </div>
-                  {Object.keys(modelData?.rank)[2] ? (
-                    <div className="col-sm-4 p-1 mt-1">
-                      <span className="m-2">
-                        {Object.keys(modelData?.rank)[2]}
-                      </span>
-                      <Progress
-                        type="circle"
-                        percent={Object.values(modelData?.rank)[2]}
-                        size={70}
-                      />
-                    </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </div>
-          </div>
-        </Modal>
+
         {/* Nevbar */}
         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
           <a
@@ -399,7 +215,6 @@ function App() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div className="col-sm-8"></div>
             <div className="col-sm-1">
-
               {darkMode === true ? (
                 <svg
                   onClick={() => setDarkMode(false)}
@@ -432,7 +247,7 @@ function App() {
               className={`${styles.navbarButton} mt-4`}
               onClick={() => openNotification("top")}
             >
-              RESUME
+              View Profiles
             </div>
 
             <div className="col-sm-2"></div>
@@ -609,79 +424,7 @@ function App() {
         <Aboutme darkMode={darkMode} />
         <Skills darkMode={darkMode} />
         {/* My SERVICES */}
-        <div className="mt-5 row">
-          <div className="col-sm-2"></div>
-          <div className="col-sm-8 mb-5" style={{ textAlign: "center" }}>
-            <span
-              className={
-                darkMode
-                  ? `text-white mt-5  ${styles.servicestext} `
-                  : `text-dark mt-5 ${styles.servicestext}  `
-              }
-            >
-              <strong>Services</strong>
-            </span>
-            <div className="row mt-5">
-              {services.map((item, id) => {
-                return (
-                  <div
-                    key={id}
-                    class={
-                      darkMode
-                        ? ` m-3 row rounded  ${styles.cardAfter}`
-                        : ` m-3 mb-5 row rounded ${styles.card}`
-                    }
-                    style={{
-                      width: "18rem",
-                      display: "flex",
-                      flexWrap: "wrap",
-                      justifyContent: "space-around",
-                    }}
-                  >
-                    <div className="mt-4">{item.icon}</div>
-
-                    <div class="card-body mt-4  text-center">
-                      <h5 class="card-title">{item.title}</h5>
-                      <p class="card-text mb-5 text-white">{item.detail}</p>
-                      <div className="row justyfy-content-center align-item-center">
-                        <div className="col-4"></div>
-                        <div onClick={() => showModal(item)} className="col-4">
-                          <div
-                            className={`${styles.navbarButton} mt-2 mb-2  border`}
-                          >
-                            MORE
-                          </div>
-                        </div>
-                        <div className="col-4"></div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div
-            className="col-sm-2 fixed-top"
-            style={{ top: "90%", left: "90%" }}
-          >
-            <div className={`${styles.bottomToTop} top-to-btm`}>
-              {showTopBtn && (
-                <span className={` icon-position icon-style`} onClick={goToTop}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="40"
-                    height="40"
-                    fill={darkMode ? "white" : "black"}
-                    class="bi bi-arrow-up-circle-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-                  </svg>
-                </span>
-              )}
-            </div>
-          </div>
-        </div>
+        <Services darkMode={darkMode} />
         {/* My PROJECT */}
         <div className={`${styles.timeLine} mb-5 text-center`}>
           <span
@@ -775,9 +518,14 @@ function App() {
               }
             >
               <h2>Fasto</h2>
-              <small>2023</small>
-              <small className="p-1 m-1 text-white bg-primary rounded stretched-link">
-                In Progress
+              <small>2022-2023</small>
+              <small className="p-1 m-1 text-white bg-success rounded ">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="https://github.com/azamali123456/You-Servics-backend"
+                >
+                  Git Repository
+                </a>
               </small>
               <p>
                 It is Home service Backend app. Which is developed in
@@ -817,6 +565,67 @@ function App() {
                 site there are two type of user where one is admin other is
                 local user. User can set there ship item and also can set its
                 prize.
+              </p>
+              <span
+                className={
+                  darkMode
+                    ? `${styles.rightContainerArrow}`
+                    : `${styles.rightContainerArrowAfter}`
+                }
+              ></span>
+            </div>
+          </div>
+          {/* Container 5 */}
+          <div className={`${styles.container} ${styles.leftContainer}`}>
+            <img src={psusa} />
+            <div
+              className={
+                darkMode ? `${styles.textBox} ` : `${styles.textBoxAfter}`
+              }
+            >
+              <h2>Placement Services USA</h2>
+              <small>2024</small>
+              <small className="p-1 m-1 text-white bg-success rounded ">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="https://placement-services-venrup.web.app/"
+                >
+                  Live
+                </a>
+              </small>
+              <p>
+                PS-USA is a job hunting and job providing web application that connects job seekers and employers efficiently. As a MERN stack developer, I contributed to building this platform by developing dynamic user interfaces with React.js, creating server-side logic using Node.js and Express.js, and managing data with MongoDB. I implemented secure user authentication, integrated RESTful APIs, and optimized application performance. Additionally, I handled the deployment and maintenance of the application on AWS, ensuring a seamless and robust user experience.
+              </p>
+              <span
+                className={
+                  darkMode
+                    ? `${styles.leftContainerArrow}`
+                    : `${styles.leftContainerArrowAfter}`
+                }
+              ></span>
+            </div>
+          </div>
+
+          {/* Container 6 */}
+          <div className={`${styles.container} ${styles.rightContainer}`}>
+            <img src={bookluxury} />
+            <div
+              className={
+                darkMode ? `${styles.textBox} ` : `${styles.textBoxAfter}`
+              }
+            >
+              <h2>Book Luxury</h2>
+              <small>2024</small>
+              <small className="p-1 m-1 text-white bg-success rounded ">
+                <a
+                  style={{ textDecoration: "none", color: "white" }}
+                  href="https://bookluxery.web.app/login"
+                >
+                  Live
+                </a>
+              </small>
+              <p>
+              Book Luxury is a premium web application designed for the elite class, offering a curated selection of high-end properties, apartments, homes, and shops. The platform provides a seamless and luxurious browsing experience, catering to discerning clients seeking exclusive and upscale real estate options."
               </p>
               <span
                 className={

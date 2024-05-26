@@ -14,7 +14,7 @@
   margin-top: 10px;
 }
 .navbarButton {
-  width: 78px;
+  width: 200px;
   height: 35px;
   background-color: #4070f4;
   border-radius: 20px;
@@ -36,7 +36,7 @@
   left: 314px;
 }
 .navbarButton:hover {
-  width: 78px;
+  width: 200px;
   height: 35px;
   border-radius: 20px;
   background-color: black;
@@ -118,13 +118,13 @@ h1:before {
   }
 }
 .topDivText {
-  font-size: 18px;
+  font-size: 14px;
   inline-size: 400px;
-  margin-left: 170px;
+  margin-left: 200px;
   overflow-wrap: break-word;
 }
 .socialMedia {
-  margin-left: 166px;
+  margin-left: 180px;
 }
 
 .icon {
@@ -630,9 +630,9 @@ h1:before {
     }
   }
   .topDivText {
-    margin-left: 32px;
-    font-size: 17px;
-    inline-size: 100px;
+    margin-left: 36px;
+    font-size: 14px;
+    inline-size: 50px;
     overflow-wrap: break-word;
   }
   .animatedText .imageCss {
@@ -1369,8 +1369,8 @@ h1:before {
 @media only screen and (min-width: 1440px) and (max-width: 1660px) {
   .topDivText {
     font-size: 20px;
-    inline-size: 253px;
-    margin-left: 175px;
+    inline-size: 429px;
+    margin-left: 178px;
     overflow-wrap: break-word;
   }
   .animatedText .imageCss {
