@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./style/mystyle.module.css";
 import AzamSVG from "./assets/icons/azam";
+import me from './assets/images/azamme.png'
 
 function Aboutme({ darkMode }) {
   return (
@@ -24,7 +25,7 @@ function Aboutme({ darkMode }) {
             <div className="d-flex">
               <div className={`${styles.aboutMeIconDiv}`}>
                 {" "}
-                <AzamSVG />
+                <img width={200} height={250} src={me}/>
               </div>
               <h6
                 className={
