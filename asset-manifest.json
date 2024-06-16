@@ -1,23 +1,41 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.dbf2e66f.css",
-    "main.js": "/My-Portfolio/static/js/main.ac2edf69.js",
-    "static/js/787.28cb0dcd.chunk.js": "/My-Portfolio/static/js/787.28cb0dcd.chunk.js",
-    "static/media/Almuhasba 2.png": "/My-Portfolio/static/media/Almuhasba 2.a3d775ec06e20d08282b.png",
-    "static/media/azam.png": "/My-Portfolio/static/media/azam.0c3c6bf13ac95ebf857a.png",
+    "main.css": "/My-Portfolio/static/css/main.f0691824.css",
+    "main.js": "/My-Portfolio/static/js/main.8f9570c4.js",
+    "static/js/787.2a0c10f9.chunk.js": "/My-Portfolio/static/js/787.2a0c10f9.chunk.js",
+    "static/media/placementServices.png": "/My-Portfolio/static/media/placementServices.a5367bda620df1f293a9.png",
+    "static/media/bookluxurylogin.png": "/My-Portfolio/static/media/bookluxurylogin.fa9af7abc5940e7db6ff.png",
+    "static/media/me1.png": "/My-Portfolio/static/media/me1.1a3389b9dde56f48001f.png",
+    "static/media/azam.js": "/My-Portfolio/static/media/azam.8e78cc2da545cca91a86.js",
+    "static/media/azamme.png": "/My-Portfolio/static/media/azamme.f6f7d7de7ee07fbc72b6.png",
     "static/media/fuelmedia 3.png": "/My-Portfolio/static/media/fuelmedia 3.aca817a5f73b24325282.png",
+    "static/media/quickbook.png": "/My-Portfolio/static/media/quickbook.15411766dbba64c9f577.png",
     "static/media/FYP.png": "/My-Portfolio/static/media/FYP.2e6d2f6cac8c11e0a39f.png",
     "static/media/Almuhasba 1.png": "/My-Portfolio/static/media/Almuhasba 1.d67f37da2eb463871eca.png",
     "static/media/fuelmedia 2.png": "/My-Portfolio/static/media/fuelmedia 2.58e160393596f10877e5.png",
     "static/media/Saudibank limited.png": "/My-Portfolio/static/media/Saudibank limited.998c4e31b27a39bda59a.png",
-    "static/media/me.png": "/My-Portfolio/static/media/me.d08e7d65fbf38426e07a.png",
+    "static/media/kafka.png": "/My-Portfolio/static/media/kafka.831e52c416b2f141e94f.png",
+    "static/media/contact.png": "/My-Portfolio/static/media/contact.d392441ed2bddea574dd.png",
+    "static/media/stripe.png": "/My-Portfolio/static/media/stripe.8661c7318fadcf06339b.png",
+    "static/media/redux.png": "/My-Portfolio/static/media/redux.b7bff383d1d03a1653fd.png",
+    "static/media/aws.png": "/My-Portfolio/static/media/aws.84d24e4e1708dc95aacf.png",
+    "static/media/database-management.png": "/My-Portfolio/static/media/database-management.ea4aaee733da7b939ce1.png",
+    "static/media/express.png": "/My-Portfolio/static/media/express.fe1eec364f69de4ba3f1.png",
+    "static/media/react.png": "/My-Portfolio/static/media/react.86c8d9eba03e29814d2a.png",
+    "static/media/typescript.png": "/My-Portfolio/static/media/typescript.834ffa6f9caa9e536f1d.png",
+    "static/media/antd.png": "/My-Portfolio/static/media/antd.2c047b165fbea6b440ef.png",
+    "static/media/bookluxury.png": "/My-Portfolio/static/media/bookluxury.d32db08f51185c83a6c7.png",
+    "static/media/html.png": "/My-Portfolio/static/media/html.6e930594286d8afe4c79.png",
+    "static/media/css-3.png": "/My-Portfolio/static/media/css-3.463e319bad8e0edf1ef7.png",
+    "static/media/oath.png": "/My-Portfolio/static/media/oath.4f10cd74f296a51770bf.png",
+    "static/media/emailjs.avif": "/My-Portfolio/static/media/emailjs.7ff77f502a07b23fd7d2.avif",
     "index.html": "/My-Portfolio/index.html",
-    "main.dbf2e66f.css.map": "/My-Portfolio/static/css/main.dbf2e66f.css.map",
-    "main.ac2edf69.js.map": "/My-Portfolio/static/js/main.ac2edf69.js.map",
-    "787.28cb0dcd.chunk.js.map": "/My-Portfolio/static/js/787.28cb0dcd.chunk.js.map"
+    "main.f0691824.css.map": "/My-Portfolio/static/css/main.f0691824.css.map",
+    "main.8f9570c4.js.map": "/My-Portfolio/static/js/main.8f9570c4.js.map",
+    "787.2a0c10f9.chunk.js.map": "/My-Portfolio/static/js/787.2a0c10f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbf2e66f.css",
-    "static/js/main.ac2edf69.js"
+    "static/css/main.f0691824.css",
+    "static/js/main.8f9570c4.js"
   ]
 }
