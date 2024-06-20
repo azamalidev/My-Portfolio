@@ -25,7 +25,7 @@ function Aboutme({ darkMode }) {
             <div className="d-flex">
               <div className={`${styles.aboutMeIconDiv}`}>
                 {" "}
-                <img width={200} height={250} src={me}/>
+                <img width={200} height={300} src={me}/>
               </div>
               <h6
                 className={

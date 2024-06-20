@@ -5,6 +5,9 @@
   cursor: url('../assets/icons/azam.js'), auto;
   color: red;
 }
+.contactUs_icon {
+  filter: drop-shadow(0 0 0.90rem #4070F4);
+}
 .topTextDiv {
   position: relative;
   top: 70px;
@@ -120,7 +123,7 @@ h1:before {
 .topDivText {
   font-size: 14px;
   inline-size: 400px;
-  margin-left: 200px;
+  margin-left: 180px;
   overflow-wrap: break-word;
 }
 .socialMedia {
@@ -796,7 +799,7 @@ h1:before {
     }
   }
   .topDivText {
-    margin-left: 32px;
+    margin-left: 20px;
     font-size: 17px;
     inline-size: 200px;
     overflow-wrap: break-word;
