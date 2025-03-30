@@ -16,7 +16,7 @@ function ContactUs({ darkMode }) {
       if (user && email && message) {
         emailjs
           .sendForm(
-            "service_es7gy41",
+            "service_qbaskug",
             "template_4j28ysi",
             form.current,
             "UrR8OS3JjUBMKVWNf"

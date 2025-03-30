@@ -100,7 +100,7 @@ function Skills({ darkMode }) {
 
     ]
     return (
-        <div className="container text-center p-2 mt-5">
+        <div className="container text-center p-2 mt-5 max-w-screen-md mx-auto overflow-hidden">
             <span className={darkMode ? `text-white mt-5  ` : `text-dark mt-5  `} >
                 <strong style={{
                     position: 'relative',
@@ -116,6 +116,7 @@ function Skills({ darkMode }) {
                     height: "200px",
                 }}
             >
+                
                 {trailSprings.map((spring, index) => (
                     <div className="skills-row">
                         <animated.div
@@ -124,7 +125,7 @@ function Skills({ darkMode }) {
                                 ...spring,
                                 height: "100px",
                                 width: "140px",
-                                marginRight: "10px",
+                                marginRight: "-5px" ,
                                 backgroundColor: "transparent",
                                 color: "white",
                                 // position:'relative',
@@ -159,7 +160,7 @@ function Skills({ darkMode }) {
                                 ...spring,
                                 height: "100px",
                                 width: "140px",
-                                marginRight: "10px",
+                                marginRight: "-5px",
                                 backgroundColor: "transparent",
                                 color: "white",
                                 // position:'relative',
@@ -193,7 +194,7 @@ function Skills({ darkMode }) {
                                 ...spring,
                                 height: "100px",
                                 width: "140px",
-                                marginRight: "10px",
+                                marginRight: "-5px",
                                 backgroundColor: "transparent",
                                 color: "white",
                             }}

@@ -11,3 +11,64 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.social-media-section {
+  display: flex;
+  flex-direction: row; /* Default: horizontal for large screens */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+}
+
+/* 📱 On mobile screens: Center, vertical layout */
+@media (max-width: 768px) {
+  .social-media-section {
+      flex-direction: column; /* Vertical on mobile */
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+  }
+}
+
+/* 🖥️ On large screens: Move more left */
+@media (min-width: 769px) {
+  .social-media-section {
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-left: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-sm-4 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .vertical-line {
+    display: none; /* Hide the vertical line on small screens */
+  }
+  .social-media-section {
+    flex-direction: row; /* Stack icons on smaller screens */
+    justify-content: center;
+  }
+}
+
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    text-align: center;
+  }
+}
+
