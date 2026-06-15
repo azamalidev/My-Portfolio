@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.css": "/My-Portfolio/static/css/main.0a4d8e27.css",
-    "main.js": "/My-Portfolio/static/js/main.09c00810.js",
-    "static/js/531.b04c9b12.chunk.js": "/My-Portfolio/static/js/531.b04c9b12.chunk.js",
-    "static/js/453.8f31a25c.chunk.js": "/My-Portfolio/static/js/453.8f31a25c.chunk.js",
-    "static/js/885.4f60ff46.chunk.js": "/My-Portfolio/static/js/885.4f60ff46.chunk.js",
+    "main.css": "/My-Portfolio/static/css/main.7e4b9b22.css",
+    "main.js": "/My-Portfolio/static/js/main.43ea3849.js",
+    "static/js/531.213e2d89.chunk.js": "/My-Portfolio/static/js/531.213e2d89.chunk.js",
+    "static/js/453.d66a0a43.chunk.js": "/My-Portfolio/static/js/453.d66a0a43.chunk.js",
+    "static/js/885.d98ab0a2.chunk.js": "/My-Portfolio/static/js/885.d98ab0a2.chunk.js",
+    "static/media/profile-image-2.jpeg": "/My-Portfolio/static/media/profile-image-2.e40330f1a050aab6f3e5.jpeg",
     "static/media/me1.png": "/My-Portfolio/static/media/me1.1a3389b9dde56f48001f.png",
+    "static/media/Aquatic Express Shipping 1.png": "/My-Portfolio/static/media/Aquatic Express Shipping 1.4203bba5166baa322a09.png",
     "static/media/azam.js": "/My-Portfolio/static/media/azam.f33f414da0c39d4ecf11.js",
-    "static/media/azamme.png": "/My-Portfolio/static/media/azamme.f6f7d7de7ee07fbc72b6.png",
     "static/media/quickbook.png": "/My-Portfolio/static/media/quickbook.15411766dbba64c9f577.png",
     "static/media/FYP.png": "/My-Portfolio/static/media/FYP.2e6d2f6cac8c11e0a39f.png",
     "static/media/Almuhasba 1.png": "/My-Portfolio/static/media/Almuhasba 1.d67f37da2eb463871eca.png",
     "static/media/Saudibank limited.png": "/My-Portfolio/static/media/Saudibank limited.998c4e31b27a39bda59a.png",
+    "static/media/Aquatic Express Shipping 2.png": "/My-Portfolio/static/media/Aquatic Express Shipping 2.20c01ec83bd74f31fd8c.png",
     "static/media/Mercurysolsnew.png": "/My-Portfolio/static/media/Mercurysolsnew.e0655e383c1c94d515f3.png",
     "static/media/stripePage.png": "/My-Portfolio/static/media/stripePage.aec54b691caae1f4ef4c.png",
     "static/media/kafka.png": "/My-Portfolio/static/media/kafka.831e52c416b2f141e94f.png",
@@ -29,14 +31,14 @@
     "static/media/oath.png": "/My-Portfolio/static/media/oath.4f10cd74f296a51770bf.png",
     "static/media/emailjs.avif": "/My-Portfolio/static/media/emailjs.7ff77f502a07b23fd7d2.avif",
     "index.html": "/My-Portfolio/index.html",
-    "main.0a4d8e27.css.map": "/My-Portfolio/static/css/main.0a4d8e27.css.map",
-    "main.09c00810.js.map": "/My-Portfolio/static/js/main.09c00810.js.map",
-    "531.b04c9b12.chunk.js.map": "/My-Portfolio/static/js/531.b04c9b12.chunk.js.map",
-    "453.8f31a25c.chunk.js.map": "/My-Portfolio/static/js/453.8f31a25c.chunk.js.map",
-    "885.4f60ff46.chunk.js.map": "/My-Portfolio/static/js/885.4f60ff46.chunk.js.map"
+    "main.7e4b9b22.css.map": "/My-Portfolio/static/css/main.7e4b9b22.css.map",
+    "main.43ea3849.js.map": "/My-Portfolio/static/js/main.43ea3849.js.map",
+    "531.213e2d89.chunk.js.map": "/My-Portfolio/static/js/531.213e2d89.chunk.js.map",
+    "453.d66a0a43.chunk.js.map": "/My-Portfolio/static/js/453.d66a0a43.chunk.js.map",
+    "885.d98ab0a2.chunk.js.map": "/My-Portfolio/static/js/885.d98ab0a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a4d8e27.css",
-    "static/js/main.09c00810.js"
+    "static/css/main.7e4b9b22.css",
+    "static/js/main.43ea3849.js"
   ]
 }
