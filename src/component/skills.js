@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useTrail, animated } from "react-spring";
+import { motion } from "framer-motion";
 import '../style/skill.css'; // Import your CSS file for styling
 
 import image1 from '../assets/skillsImages/antd.png';
@@ -58,161 +58,119 @@ function Skills({ darkMode }) {
         };
     }, []);
 
-    const trailSprings = useTrail(9, {
-        transform: isVisible ? "translateY(0)" : "translateY(100px)",
-        opacity: isVisible ? 1 : 0,
-        from: { transform: "translateY(-100px)", opacity: 0 }
-    });
     const skills1 = [
-        image1,
-        image2,
-        image3,
-        image4,
-        image5,
-        image6,
-        image7,
-        image8,
-        image9,
-      
-    ]
+        image1, image2, image3, image4, image5, image6, image7, image8, image9
+    ];
     const skills2 = [
-        image11,
-        image12,
-        image13,
-        image14,
-        image15,
-        image16,
-        image17,
-        image18,
-        image19,
-        
-    ]
+        image11, image12, image13, image14, image15, image16, image17, image18, image19
+    ];
     const skills3 = [
-        image21,
-        image22,
-        image23,
-        image24,
-        image25,
-        image26,
-        image27,
-        image10,
-        image20,
+        image21, image22, image23, image24, image25, image26, image27, image10, image20
+    ];
 
-    ]
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 100
+            }
+        }
+    };
+
     return (
         <div className="container text-center p-2 mt-5 max-w-screen-md mx-auto overflow-hidden">
-            <span className={darkMode ? `text-white mt-5  ` : `text-dark mt-5  `} >
-                <strong style={{
-                    position: 'relative',
-                    top: '10px',
-                    fontSize: "25px"
-                }}>Skills</strong>
+            <span className={darkMode ? `text-white mt-5` : `text-dark mt-5`} style={{ fontSize: "25px" }}>
+                <strong>Skills</strong>
             </span>
-            <div
+
+            {/* Row 1 */}
+            <motion.div
                 id="skills"
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "200px",
-                }}
+                className="skills-row"
+                initial="hidden"
+                animate={isVisible ? "visible" : "hidden"}
+                variants={containerVariants}
             >
-                
-                {trailSprings.map((spring, index) => (
-                    <div className="skills-row">
-                        <animated.div
-                            key={index}
-                            style={{
-                                ...spring,
-                                height: "100px",
-                                width: "140px",
-                                marginRight: "-5px" ,
-                                backgroundColor: "transparent",
-                                color: "white",
-                                // position:'relative',
-                                // left:'100px'
-                            }}
-                            className="skill-card"
-                        >
-                            <img style={{
-                                position: 'relative',
-                                left: '0px',
-                                width: '5rem',
-                                height: '5rem'
-                            }}
-                                src={skills1[index]} />
-                        </animated.div>
-                    </div>
+                {skills1.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        className="skill-card"
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <img
+                            src={skill}
+                            alt={`Skill ${index + 1}`}
+                            style={{ width: '5rem', height: '5rem' }}
+                        />
+                    </motion.div>
                 ))}
-            </div>
-            <div
+            </motion.div>
+
+            {/* Row 2 */}
+            <motion.div
                 id="skills2"
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "200px",
-                }}
+                className="skills-row2"
+                initial="hidden"
+                animate={isVisible ? "visible" : "hidden"}
+                variants={containerVariants}
             >
-                {trailSprings.map((spring, index) => (
-                    <div className="skills-row2">
-                        <animated.div
-                            key={index}
-                            style={{
-                                ...spring,
-                                height: "100px",
-                                width: "140px",
-                                marginRight: "-5px",
-                                backgroundColor: "transparent",
-                                color: "white",
-                                // position:'relative',
-                                // left:'100px'
-                            }}
-                            className="skill-card2"
-                        >
-                            <img style={{
-                                position: 'relative',
-                                left: '0px',
-                                width: '5rem',
-                                height: '5rem'
-                            }} src={skills2[index]} />
-                        </animated.div>
-                    </div>
+                {skills2.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        className="skill-card2"
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <img
+                            src={skill}
+                            alt={`Skill ${index + 10}`}
+                            style={{ width: '5rem', height: '5rem' }}
+                        />
+                    </motion.div>
                 ))}
-            </div>
-            <div
+            </motion.div>
+
+            {/* Row 3 */}
+            <motion.div
                 id="skills3"
-                style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "200px",
-                }}
+                className="skills-row3"
+                initial="hidden"
+                animate={isVisible ? "visible" : "hidden"}
+                variants={containerVariants}
             >
-                {trailSprings.map((spring, index) => (
-                    <div className="skills-row3">
-                        <animated.div
-                            key={index}
-                            style={{
-                                ...spring,
-                                height: "100px",
-                                width: "140px",
-                                marginRight: "-5px",
-                                backgroundColor: "transparent",
-                                color: "white",
-                            }}
-                            className="skill-card3"
-                        >
-                            <img style={{
-                                position: 'relative',
-                                left: '0px',
-                                width: '5rem',
-                                height: '5rem'
-                            }} src={skills3[index]} />
-                        </animated.div>
-                    </div>
+                {skills3.map((skill, index) => (
+                    <motion.div
+                        key={index}
+                        className="skill-card3"
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                    >
+                        <img
+                            src={skill}
+                            alt={`Skill ${index + 19}`}
+                            style={{ width: '5rem', height: '5rem' }}
+                        />
+                    </motion.div>
                 ))}
-            </div>
-
+            </motion.div>
         </div>
-
     );
 }
 

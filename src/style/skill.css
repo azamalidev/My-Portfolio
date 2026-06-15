@@ -24,10 +24,12 @@
 @media (max-width: 768px) {
     #skills {
         display: flex !important;
-    flex-direction: column; /* Display skills vertically */
-    align-items: center;
-    margin-bottom: 211%;
-    margin-top: 520px;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
  /* For Card 2 */
@@ -57,22 +59,17 @@
 
 @media (max-width: 768px) {
     #skills2 {
-    display: flex !important;
-    flex-direction: column; /* Display skills vertically */
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 200px;
-  
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .skill-card2 {
         height: 100px;
         width: 140px;
         margin-right: 10px;
         background-color: transparent;
-        position: relative !important;
-        left:-70%!important;
-    top: -856%;
-       
     }
 }
 
@@ -103,22 +100,17 @@
 
 @media (max-width: 768px) {
     #skills3 {
-    display: flex !important;
-    flex-direction: column; /* Display skills vertically */
-    align-items: center;
-    margin-bottom: 106%;
-    margin-top: -320%;
-
-  
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     .skill-card3 {
         height: 100px;
         width: 140px;
         margin-right: 10px;
         background-color: transparent;
-        position: relative !important;
-        left:70%!important;
-       
     }
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
 import styles from "../mystyle.module.css";
-import image from "../assets/images/me.png";
+import image from "../assets/images/profile-image-2.jpeg";
 import emailjs from "@emailjs/browser";
 import { notification } from "antd";
 function ContactUs({ darkMode }) {
@@ -94,12 +95,18 @@ function ContactUs({ darkMode }) {
             Contact Me
           </strong>
         </span>
-        <div className="col-sm-4 d-flex">
-          <img
+        <div className="col-sm-4 d-flex justify-content-center align-items-center">
+          <motion.img
             className={`${styles.footerImage} rounded shadow`}
             width={300}
             height={300}
             src={image}
+            alt="Profile"
+            initial={{ opacity: 0, scale: 0.85, rotate: -5 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileTap={{ scale: 0.98 }}
           />
         </div>
         <div className="col-sm-2 ">
@@ -163,7 +170,7 @@ function ContactUs({ darkMode }) {
 
         <div className="footer text-center mt-3 mb-3">
           <h5 className={darkMode ? "text-white" : "text-dark"}>
-            Azam Ali © 2023
+            Azam Ali © {new Date().getFullYear()}
           </h5>
         </div>
       </div>

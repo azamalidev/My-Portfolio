@@ -304,8 +304,186 @@ h1:before {
   border-bottom-right-radius: 100px;
   color: black;
 }
+.aboutMeSection {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.aboutMeImage {
+  border-radius: 30px;
+  overflow: hidden;
+  border: 2px solid rgba(63, 255, 0, 0.25);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+.aboutMeLabel {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(63, 255, 0, 0.12);
+  color: #3cff00;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.aboutMeTitle {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.1;
+}
+.aboutMeBody {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: inherit;
+  opacity: 0.92;
+}
+.aboutMeLink {
+  color: #3cff00;
+  text-decoration: none;
+}
+.aboutMeLink:hover {
+  text-decoration: underline;
+}
+.aboutMeStat {
+  border-radius: 18px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 100px;
+}
+.aboutMeStat strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+}
+.aboutMeStat span {
+  display: block;
+  color: rgba(255, 255, 255, 0.75);
+}
 .aboutMeIconDiv {
   color: white;
+}
+.experienceSection {
+  padding: 2rem 1rem 0;
+}
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+@media (max-width: 767px) {
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+.experienceCard {
+  position: relative;
+  border-radius: 28px;
+  padding: 1.8rem;
+  overflow: hidden;
+  border: 1px solid rgba(63, 255, 0, 0.18);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  color: inherit;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease;
+}
+.experienceCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(63, 255, 0, 0.07), transparent 45%);
+  pointer-events: none;
+}
+.experienceCardDark {
+  background: rgba(15, 18, 29, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #f7f7ff;
+}
+.experienceCardLight {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: rgba(34, 197, 94, 0.24);
+  color: #111827;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+.experienceCardLight::before {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), transparent 45%);
+}
+.experienceCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+.experienceBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(63, 255, 0, 0.12);
+  color: #3cff00;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.experienceIcon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+}
+.experienceIconDark {
+  background: rgba(255, 255, 255, 0.06);
+}
+.experienceIconLight {
+  background: rgba(16, 185, 129, 0.12);
+}
+.experienceCardBody {
+  position: relative;
+  z-index: 1;
+}
+.experienceRole {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.experienceDates {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.95rem;
+}
+.experienceCardLight .experienceDates {
+  color: rgba(17, 24, 39, 0.68);
+}
+.experienceText {
+  margin: 0 0 1rem;
+  color: inherit;
+  line-height: 1.75;
+}
+.experienceList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+.experienceList li {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: inherit;
+}
+.experienceListIcon {
+  display: inline-flex;
+  width: 20px;
+  min-width: 20px;
+  color: #3cff00;
+  margin-top: 3px;
 }
 /* Services */
 .servicestext {
@@ -335,174 +513,548 @@ h1:before {
 }
 /* Timeline */
 .timeLine {
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
   max-width: 1200px;
-  margin: 100px auto;
+  margin: 70px auto;
+  padding: 20px 15px;
 }
 .timeLine .container {
-  padding: 10px 50px;
+  padding: 0;
   position: relative;
-  width: 50%;
-
-  animation: movedown 1s linear forwards;
-  z-index: 12;
+  width: 100%;
+  animation: movedown 0.8s ease forwards;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.timeLine .container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 36px 100px rgba(0, 0, 0, 0.28);
+  border-color: rgba(63, 255, 0, 0.25);
 }
 @keyframes movedown {
   0% {
-    opacity: 1;
-    transform: translateY(-30px);
+    opacity: 0;
+    transform: translateY(24px);
   }
   100% {
     opacity: 1;
     transform: translateY(0px);
   }
 }
+.container:nth-child(1) {
+  animation-delay: 0.1s;
+}
 .container:nth-child(2) {
-  animation-delay: 1s;
+  animation-delay: 0.15s;
 }
 .container:nth-child(3) {
-  animation-delay: 2s;
+  animation-delay: 0.2s;
 }
 .container:nth-child(4) {
-  animation-delay: 3s;
+  animation-delay: 0.25s;
+}
+.container:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.container:nth-child(6) {
+  animation-delay: 0.35s;
 }
 .timeLine .container .textBox {
-  padding: 20px 30px;
-  background: linear-gradient(to right, #4070f4, rgba(239, 242, 244, 1.893));
+  padding: 25px 24px 28px;
+  background: rgba(10, 15, 30, 0.85);
+  backdrop-filter: blur(16px);
   position: relative;
-  border-radius: 6px;
+  border-radius: 0 0 24px 24px;
   font-size: 15px;
-  color: white;
+  color: #e9ecef;
 }
 .textBoxAfter {
-  padding: 20px 30px;
-  background-color: rgb(99, 99, 99);
+  padding: 25px 24px 28px;
+  background-color: rgba(255, 255, 255, 0.95);
   position: relative;
-  border-radius: 6px;
+  border-radius: 0 0 24px 24px;
   font-size: 15px;
-  color: white;
+  color: #111;
 }
-.leftContainer {
+.leftContainer,
+.rightContainer {
   left: 0;
 }
-.rightContainer {
-  left: 50%;
-}
 .container img {
-  position: absolute;
-  width: 40px;
-  height: 37px;
-  border-radius: 50%;
-  right: -20px;
-  top: 32px;
-  z-index: 10;
-  border: 2px solid black;
-  box-shadow: 10px 10px 1px 1px #4070f4;
-  animation: shadowffect 2s infinite;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
-  animation-duration: 1s;
+  position: relative;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 24px 24px 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .contactInput {
   width: 400px;
   height: 50px;
   border: none;
 }
-@keyframes shadowffect {
-  0% {
-    box-shadow: 0px 0px 1px 1px #4070f4;
-  }
-  100% {
-    box-shadow: 0px 1px 3px 4px #4070f4;
-  }
-}
 .rightContainer img {
-  left: -20px;
-  z-index: 10 !important;
+  left: 0;
+  z-index: auto !important;
 }
 .timeLine::after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 100%;
-  background: #3fff00;
-  box-shadow: white 0px 19px 43px;
-  top: 33px;
-  left: 50%;
-  margin-left: -3px;
-  z-index: 1;
-  animation: moveline 6s linear forwards;
-  border-radius: 10px;
-}
-@keyframes moveline {
-  0% {
-    height: 0;
-    z-index: 1;
-  }
-  100% {
-    height: 100%;
-    z-index: 1;
-  }
+  display: none;
 }
 .textBox h2 {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.45rem;
+  margin-bottom: 10px;
 }
 .textBox small {
   display: inline-block;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  color: #a3d85c;
 }
-.leftContainerArrow {
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 28px;
-  left: 500px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid white;
-  right: 15px;
-}
-.leftContainerArrowAfter {
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 28px;
-  left: 500px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 15px solid rgb(99, 99, 99);
-  right: 15px;
-}
-.rightContainerArrow {
-  height: 0;
-  width: 0;
-  position: absolute;
-  top: 28px;
-  left: -14px;
-  z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid #4070f4;
-}
+.leftContainerArrow,
+.leftContainerArrowAfter,
+.rightContainerArrow,
 .rightContainerArrowAfter {
-  height: 0;
-  width: 0;
+  display: none;
+}
+.projectStatus {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.projectStatus span {
+  font-size: 0.85rem;
+  padding: 6px 11px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.projectLive {
+  color: #fff;
+  background: #3fff00;
+}
+.projectDraft {
+  color: #fff;
+  background: #4070f4;
+}
+.projectsSection {
+  position: relative;
+  padding: 5rem 1rem 4rem;
+  overflow: hidden;
+}
+.projectsSection::before {
+  content: "";
   position: absolute;
-  top: 28px;
-  left: -14px;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  background: rgba(63, 255, 0, 0.14);
+  filter: blur(80px);
+  top: -120px;
+  right: -110px;
+  pointer-events: none;
+}
+.projectsSection::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 999px;
+  background: rgba(64, 112, 244, 0.16);
+  filter: blur(90px);
+  bottom: -120px;
+  left: -110px;
+  pointer-events: none;
+}
+.projectsContainer {
+  position: relative;
   z-index: 1;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 15px solid rgb(99, 99, 99);
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+.projectsHeader {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.projectsEyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(63, 255, 0, 0.12);
+  color: #3cff00;
+  border: 1px solid rgba(63, 255, 0, 0.22);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.projectsEyebrow::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3cff00;
+  box-shadow: 0 0 20px #3cff00;
+}
+.projectsTitle {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.1rem, 5vw, 4rem);
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+.projectsSubtitle {
+  margin: 1rem auto 0;
+  max-width: 620px;
+  color: #fff;
+  opacity: 0.82;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+.projectCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  padding: 0.85rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.18);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+}
+.projectCard:focus-visible {
+  outline: 3px solid rgba(63, 255, 0, 0.7);
+  outline-offset: 4px;
+}
+.projectCard::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at top right, rgba(63, 255, 0, 0.25), transparent 35%);
+  opacity: 0.75;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.projectCard::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 35%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.24), transparent);
+  pointer-events: none;
+}
+.projectCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(63, 255, 0, 0.35);
+  box-shadow: 0 34px 90px rgba(0, 0, 0, 0.32);
+}
+.projectCard:hover::before {
+  opacity: 1;
+}
+.projectCardDark {
+  background: rgba(10, 14, 26, 0.78);
+  color: #f8fafc;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+.projectCardLight {
+  background: rgba(255, 255, 255, 0.82);
+  color: #0f172a;
+  border-color: rgba(63, 255, 0, 0.16);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+}
+.projectCardLight::before {
+  background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.18), transparent 40%);
+}
+.projectImageWrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.08);
+}
+.projectImageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 55%);
+  pointer-events: none;
+}
+.projectImage {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 0.45s ease;
+}
+.projectImageSecondary {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.35s ease, transform 0.45s ease;
+}
+.projectCard:hover .projectImage {
+  transform: scale(1.08);
+}
+.projectCard:hover .projectImageSecondary {
+  opacity: 1;
+  transform: scale(1.08);
+}
+.projectStatus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.projectStatus span {
+  font-size: 0.75rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.projectLive {
+  background: linear-gradient(135deg, #3cff00, #a3ff12);
+  color: #052e16;
+  box-shadow: 0 10px 30px rgba(63, 255, 0, 0.28);
+}
+.projectDraft {
+  background: linear-gradient(135deg, #4070f4, #7c3aed);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(64, 112, 244, 0.24);
 }
 .footerImage {
   position: relative;
   left: 117px;
   top: -46px;
 }
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(12px);
+  animation: modalFade 0.2s ease both;
+}
+.modalCard {
+  position: relative;
+  width: min(860px, 100%);
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+  margin-top: 2rem;
+  border-radius: 32px;
+  padding: 1.25rem;
+  background: rgba(10, 14, 26, 0.96);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 35px 120px rgba(0, 0, 0, 0.55);
+  animation: modalIn 0.25s ease both;
+}
+.modalClose {
+  position: sticky;
+  top: 0;
+  float: right;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  margin: 0 0 0.75rem 0.75rem;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.modalHeader {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.95fr) 1.05fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+.modalImage {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+.modalHeadings {
+  padding-top: 0.35rem;
+}
+.modalMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.65rem 0 1rem;
+}
+.modalMetaItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(63, 255, 0, 0.12);
+  color: #3cff00;
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.modalTitle {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.05;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+}
+.modalText {
+  margin: 1rem 0 0;
+  color: rgba(248, 250, 252, 0.78);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+.modalTechList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.modalTech {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.modalButton {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.modalButtonPrimary {
+  color: #041105;
+  background: linear-gradient(135deg, #3cff00, #86efac);
+  box-shadow: 0 18px 40px rgba(63, 255, 0, 0.24);
+}
+.modalButtonSecondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+.modalButton:hover {
+  transform: translateY(-2px);
+}
+.modalButtonPrimary:hover {
+  box-shadow: 0 24px 50px rgba(63, 255, 0, 0.34);
+}
+.modalButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@media (max-width: 1024px) {
+  .projectGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .projectsSection {
+    padding: 3.5rem 0.85rem 3rem;
+  }
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .projectImage {
+    height: 230px;
+  }
+  .modalCard {
+    max-height: calc(100vh - 2rem);
+    margin-top: 1rem;
+    border-radius: 24px;
+    padding: 1rem;
+  }
+  .modalHeader {
+    grid-template-columns: 1fr;
+  }
+  .modalImage {
+    min-height: 260px;
+  }
+  .modalActions {
+    flex-direction: column;
+  }
+  .modalButton {
+    width: 100%;
+  }
+}
+
 /* ALL Media Qury is here */
 
 @media only screen and (min-width: 220px) and (max-width: 320px) {
@@ -534,31 +1086,32 @@ h1:before {
   .timeLine::after {
     left: 15px;
   }
-  .container {
+  .timeLine .container {
     width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 15px;
   }
-  .textBox p {
+  .timeLine .textBox p {
     font-size: 15px;
   }
-  .container img {
-    position: absolute;
-    width: 40px;
-    height: 37px;
-    border-radius: 50%;
-    right: 112px;
-    top: 32px;
-    z-index: 10;
-    border: 4px solid #4070f4;
+  .timeLine .container img {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    right: auto;
+    top: auto;
+    z-index: auto;
+    border: none;
   }
-  .rightContainer {
+  .timeLine .rightContainer {
     left: 0%;
   }
-  .rightContainer img {
-    left: -5px;
-    z-index: 10 !important;
+  .timeLine .rightContainer img {
+    left: 0;
+    z-index: auto !important;
   }
   .leftContainerArrow {
     height: 0;
@@ -700,31 +1253,32 @@ h1:before {
   .timeLine::after {
     left: 15px;
   }
-  .container {
+  .timeLine .container {
     width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 15px;
   }
-  .textBox p {
+  .timeLine .textBox p {
     font-size: 15px;
   }
-  .container img {
-    position: absolute;
-    width: 40px;
-    height: 37px;
-    border-radius: 50%;
-    right: 140px;
-    top: 32px;
-    z-index: 10;
-    border: 4px solid #4070f4;
+  .timeLine .container img {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    right: auto;
+    top: auto;
+    z-index: auto;
+    border: none;
   }
-  .rightContainer {
+  .timeLine .rightContainer {
     left: 0%;
   }
-  .rightContainer img {
-    left: -5px;
-    z-index: 10 !important;
+  .timeLine .rightContainer img {
+    left: 0;
+    z-index: auto !important;
   }
   .leftContainerArrow {
     height: 0;
@@ -874,31 +1428,32 @@ h1:before {
   .timeLine::after {
     left: 15px;
   }
-  .container {
+  .timeLine .container {
     width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 15px;
   }
-  .textBox p {
+  .timeLine .textBox p {
     font-size: 15px;
   }
-  .container img {
-    position: absolute;
-    width: 40px;
-    height: 37px;
-    border-radius: 50%;
-    right: 141px;
-    top: 32px;
-    z-index: 10;
-    border: 4px solid #4070f4;
+  .timeLine .container img {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    right: auto;
+    top: auto;
+    z-index: auto;
+    border: none;
   }
-  .rightContainer {
+  .timeLine .rightContainer {
     left: 0%;
   }
-  .rightContainer img {
-    left: -5px;
-    z-index: 10 !important;
+  .timeLine .rightContainer img {
+    left: 0;
+    z-index: auto !important;
   }
   .leftContainerArrow {
     height: 0;
@@ -1042,31 +1597,32 @@ h1:before {
   .timeLine::after {
     left: 15px;
   }
-  .container {
+  .timeLine .container {
     width: 100%;
-    padding-left: 80px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
     font-size: 15px;
   }
-  .textBox p {
+  .timeLine .textBox p {
     font-size: 15px;
   }
-  .container img {
-    position: absolute;
-    width: 40px;
-    height: 37px;
-    border-radius: 50%;
-    right: 167px;
-    top: 32px;
-    z-index: 10;
-    border: 4px solid #4070f4;
+  .timeLine .container img {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    border-radius: 24px 24px 0 0;
+    object-fit: cover;
+    right: auto;
+    top: auto;
+    z-index: auto;
+    border: none;
   }
-  .rightContainer {
+  .timeLine .rightContainer {
     left: 0%;
   }
-  .rightContainer img {
-    left: -5px;
-    z-index: 10 !important;
+  .timeLine .rightContainer img {
+    left: 0;
+    z-index: auto !important;
   }
   .leftContainerArrow {
     height: 0;
