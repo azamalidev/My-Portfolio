@@ -1,117 +1,142 @@
 .skills-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .skill-card {
-    height: 100px;
-    /* width: 140px; */
-    margin-right: 10px;
-    background-color: transparent;
+  height: 100px;
+  margin-right: 10px;
+  background: rgba(63, 255, 0, 0.05);
+  border: 1px solid rgba(63, 255, 0, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--cyber-green);
+  box-shadow: 0 0 20px rgba(63, 255, 0, 0.2);
 }
 
 #skills {
-    display: flex !important;
-    background-color: transparent;
-    justify-content: center;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    
+  display: flex !important;
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 @media (max-width: 768px) {
-    #skills {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        margin-left: 0;
-        margin-right: 0;
-    }
+  #skills {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
- /* For Card 2 */
-
-
 
 .skills-row2 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .skill-card2 {
-    height: 100px;
-    /* width: 140px; */
-    margin-right: 10px;
-    background-color: transparent;
+  height: 100px;
+  margin-right: 10px;
+  background: rgba(63, 255, 0, 0.05);
+  border: 1px solid rgba(63, 255, 0, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-card2:hover {
+  border-color: var(--cyber-green);
+  box-shadow: 0 0 20px rgba(63, 255, 0, 0.2);
 }
 
 #skills2 {
-    display: flex !important;
-    background-color: transparent;
-    justify-content: center;
-    margin-bottom: 20px;
-    
+  display: flex !important;
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    #skills2 {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    .skill-card2 {
-        height: 100px;
-        width: 140px;
-        margin-right: 10px;
-        background-color: transparent;
-    }
+  #skills2 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .skill-card2 {
+    height: 100px;
+    width: 140px;
+    margin-right: 10px;
+  }
 }
 
-
-
-/* For Card 3 */
-
 .skills-row3 {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .skill-card3 {
-    height: 100px;
-    /* width: 140px; */
-    margin-right: 10px;
-    background-color: transparent;
+  height: 100px;
+  margin-right: 10px;
+  background: rgba(63, 255, 0, 0.05);
+  border: 1px solid rgba(63, 255, 0, 0.15);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-card3:hover {
+  border-color: var(--cyber-green);
+  box-shadow: 0 0 20px rgba(63, 255, 0, 0.2);
 }
 
 #skills3 {
-    display: flex !important;
-    background-color: transparent;
-    justify-content: center;
-    margin-bottom: 20px;
-    
+  display: flex !important;
+  background-color: transparent;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    #skills3 {
-        display: flex !important;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-top: 20px;
-    }
-    .skill-card3 {
-        height: 100px;
-        width: 140px;
-        margin-right: 10px;
-        background-color: transparent;
-    }
+  #skills3 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .skill-card3 {
+    height: 100px;
+    width: 140px;
+    margin-right: 10px;
+  }
 }
-
-

@@ -91,7 +91,7 @@ const projectItems = [
   },
 ];
 
-function Projects({ darkMode }) {
+function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const closeModal = () => setSelectedProject(null);
@@ -103,15 +103,9 @@ function Projects({ darkMode }) {
   };
 
   return (
-    <section
-      className={`${styles.projectsSection} ${
-        darkMode ? styles.projectsDark : styles.projectsLight
-      }`}
-      aria-labelledby="projects-heading"
-    >
+    <section className={styles.projectsSection} aria-labelledby="projects-heading">
       <div className={styles.projectsContainer}>
         <div className={styles.projectsHeader}>
-          
           <h2 id="projects-heading" className={styles.projectsTitle}>
             Featured Projects
           </h2>
@@ -127,9 +121,7 @@ function Projects({ darkMode }) {
             <button
               key={project.id}
               type="button"
-              className={`${styles.projectCard} ${
-                darkMode ? styles.projectCardDark : styles.projectCardLight
-              }`}
+              className={styles.projectCard}
               onClick={() => setSelectedProject(project)}
               aria-label={`Open details for ${project.title}`}
             >
