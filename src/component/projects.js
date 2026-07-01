@@ -105,11 +105,10 @@ function Projects() {
   return (
     <section className={styles.projectsSection} aria-labelledby="projects-heading">
       <div className={styles.projectsContainer}>
-        <div className={styles.projectsHeader}>
-          <h2 id="projects-heading" className={styles.projectsTitle}>
-            Featured Projects
-          </h2>
-          <p className={styles.projectsSubtitle}>
+        <div className={styles.sectionHeader}>
+          <div className={styles.sectionEyebrow}><svg width="8" height="8" viewBox="0 0 8 8" fill="#3FFF00"><circle cx="4" cy="4" r="4"/></svg>Portfolio</div>
+          <h2 className={styles.sectionTitle}>Featured Projects</h2>
+          <p className={styles.sectionSubtitle}>
             A modern showcase of my recent frontend, backend, and full-stack
             builds designed with responsive layouts, clean UX, and production
             ready architecture.
@@ -117,14 +116,17 @@ function Projects() {
         </div>
 
         <div className={styles.projectGrid}>
-          {projectItems.map((project) => (
+          {projectItems.map((project, idx) => (
             <button
               key={project.id}
               type="button"
               className={styles.projectCard}
               onClick={() => setSelectedProject(project)}
               aria-label={`Open details for ${project.title}`}
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
+              <div className={styles.projectCardOrbital} />
+              <div className={styles.projectCardInner}>
               <div className={styles.projectImageWrap}>
                 <img
                   src={project.image}
@@ -139,7 +141,7 @@ function Projects() {
                   />
                 )}
                 <div className={styles.projectStatus}>
-                  <span className={project.statusClass}>{project.status}</span>
+                  <span className={project.statusClass}>{project.status || 'Draft'}</span>
                 </div>
               </div>
               <div className={styles.projectBody}>
@@ -156,8 +158,11 @@ function Projects() {
                       </li>
                     ))}
                   </ul>
-                  <span className={styles.projectArrow}>↗</span>
+                  <div className={styles.projectAction}>
+                    <span className={styles.projectArrow}>↗</span>
+                  </div>
                 </div>
+              </div>
               </div>
             </button>
           ))}
